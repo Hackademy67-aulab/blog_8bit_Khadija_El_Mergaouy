@@ -1,0 +1,15 @@
+
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Press Start 2P', cursive;
+}
+.logo{
+    width: 4rem;
+}
+h5 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: small;
+}
