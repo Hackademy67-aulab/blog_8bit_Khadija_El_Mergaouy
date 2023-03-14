@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Products</title>
+    <title>About us</title>
     
     <!-- CDN fontsgoogle -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,7 @@
 
   </head>
 
+
   <body>
 
   <nav class="navbar navbar-expand-lg bg-warning">
@@ -36,41 +37,34 @@
           <a class="nav-link text-success fw-bold" href="{{route('homepage')}}">HOME</a>
         </li>
         <li class="nav-item  mx-md-3">
-          <a class="nav-link active text-success fw-bold" aria-current="page" href="{{route('products')}}">PRODUCTS</a>
+          <a class="nav-link text-success fw-bold" href="{{route('products')}}">PRODUCTS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-success fw-bold" href="{{route('aboutus')}}">ABOUT</a>
+          <a class="nav-link active text-success fw-bold"  aria-current="page" href="{{route('aboutus')}}">ABOUT</a>
         </li>
       </ul>
     </div> 
   </div>
 </nav>
 
-
 <section class="container">
 
 <div class="row justify-content-center">
 
-@foreach($products as $product)
   <div class="col-12 col-md-3 m-5">
 
-  <div class="card bg-warning border-0 rounded-0 p-2" style="width: 18rem;">
-  <img src="{{$product['img']}}" class="card-img-top" alt="{{$product['name']}}">
+  <div class="card rounded-0 p-2" style="width: 18rem;">
+  <img src="{{$element['img']}}" class="card-img-top" alt="{{$element['name']}}">
   <div class="card-body d-flex flex-column justify-content-between align-items-center p-0">
-    <h5 class="card-title text-center text-success py-3">{{$product['name']}}</h5>
-    <p class="card-text text-center">{{$product['description']}}</p>
-    <h6 class="text-center">{{$product['price']}}</h6>
-    <a href="{{route('productdetails', ['id'=>$product['id']])}}" class="btn btn-success mt-3">Details</a>
+    <h5 class="card-title text-center text-success py-3">{{$element['name']}}</h5>
+    <p class="card-text text-center">{{$element['description']}}</p>
+    <a href="{{route('aboutus')}}" class="btn btn-warning mt-3">Details</a>
   </div>
 </div>
 
   </div>
-@endforeach
 </div>
 </section>
-
-
-
 
 
 

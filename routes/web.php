@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('homepage');
 })-> name('homepage');
 
-Route::get('/about', function () {
-    return view('aboutus');
-})-> name('aboutus');
-
 Route::get('/products', function () {
     
     $products = [
@@ -57,4 +53,31 @@ Route::get('/productdetails/{id}', function ($id) {
     } 
 })-> name('productdetails');
 
+
+Route::get('/about', function () {
+
+    $about = [
+        ['id'=>'1', 'name'=>'Luigi', 'description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ad!', 'img'=>'/media/luigi.png' ],
+        ['id'=>'2', 'name'=>'Mario', 'description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ad!', 'img'=>'/media/mario.png' ],
+        ['id'=>'3', 'name'=>'Yoshi', 'description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ad!', 'img'=>'media/yoshi.png' ],
+    ];
+
+    return view('aboutus',compact('about'));
+})-> name('aboutus');
+
+Route::get('/aboutusdetails/{id}', function ($id) {
+
+    $about = [
+        ['id'=>'1', 'name'=>'Luigi', 'description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ad!', 'img'=>'/media/luigi.png' ],
+        ['id'=>'2', 'name'=>'Mario', 'description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ad!', 'img'=>'/media/mario.png' ],
+        ['id'=>'3', 'name'=>'Yoshi', 'description'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, ad!', 'img'=>'media/yoshi.png' ],
+    ];
+
+    foreach($about as $element){
+        if ($element['id']==$id) {
+            return view('aboutusdetails', compact('element'));
+        }
+    } 
+
+})-> name('aboutusdetails');
 

@@ -2,8 +2,13 @@
 *{
     font-family: 'Roboto Mono', monospace;
 }
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 90px;
+    letter-spacing: 10px;
+}
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
     font-family: 'Press Start 2P', cursive;
 }
 .logo{
@@ -12,4 +17,9 @@ h1, h2, h3, h4 {
 h5 {
     font-family: 'Press Start 2P', cursive;
     font-size: small;
+}
+.headerCus{
+    background-image: url(/media/cloud.jpeg);
+    background-position: center;
+    background-size: cover;
 }

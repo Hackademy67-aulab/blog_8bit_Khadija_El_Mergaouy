@@ -46,6 +46,13 @@
   </div>
 </nav>
 
+<header class="container-fluid">
+
+<div class="row vh-100 justify-content-center align-items-center headerCus">
+  <h1 class="text-success text-center">8LOG BLOG</h1>
+</div>
+</header>
+
 
 
 

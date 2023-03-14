@@ -47,6 +47,29 @@
   </div>
 </nav>
 
+<section class="container">
+
+<div class="row justify-content-center">
+
+@foreach($about as $element)
+  <div class="col-12 col-md-3 m-5">
+
+  <div class="card rounded-0 p-2" style="width: 18rem;">
+  <img src="{{$element['img']}}" class="card-img-top" alt="{{$element['name']}}">
+  <div class="card-body d-flex flex-column justify-content-between align-items-center p-0">
+    <h5 class="card-title text-center text-success py-3">{{$element['name']}}</h5>
+    <p class="card-text text-center">{{$element['description']}}</p>
+    <a href="{{route('aboutusdetails', ['id'=>$element['id']])}}" class="btn btn-warning mt-3">Details</a>
+  </div>
+</div>
+
+  </div>
+@endforeach
+</div>
+</section>
+
+
+
 
 
 
